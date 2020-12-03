@@ -18,9 +18,9 @@ public class Deck : MonoBehaviour
     {
         deck.Add(newCard);
         // Deck is full at 18 cards so lets shuffle
-        if(deck.size == 17)
+        if((deck.Count - 1) == 17)
         {
-            Shuffle(deck);
+            Shuffle(ref deck);
         }
     }
     // Call this method after every draw to remove from deck
