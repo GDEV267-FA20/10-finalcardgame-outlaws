@@ -13,19 +13,23 @@ public enum Place {
 [System.Serializable]
 public class PlaceDefinition {
     public Place place = Place.None;
-    public int HPChange = 0;
+    public int HealthChange = 0;
     public int MoneyChange = 0;
     public int ReactionChange = 0;
     public int AccuracyChange = 0;
     public int ConfidenceChange = 0;
 }
 
-
 public class ThreeDays : MonoBehaviour {
-    
+
     [Header("Set in Inspector")]
+    private OutlawCharacter HumanPlayer;
+    private OutlawCharacter AIPlayer;
+
     public PlaceDefinition[] placeDefinitions;
     static Dictionary<Place, PlaceDefinition> PLACE_DICTIONARY;
+
+    public int day;
     
     void Awake() {
         //Define the dictionary of places
@@ -33,13 +37,16 @@ public class ThreeDays : MonoBehaviour {
         foreach(PlaceDefinition def in placeDefinitions) {
             PLACE_DICTIONARY[def.place] = def;
         }
+        day = 1;
     }
 
     static public PlaceDefinition GetPlaceDefinition(Place place) {
         if(PLACE_DICTIONARY.ContainsKey(place)) {
-          
+            return (PLACE_DICTIONARY[place]);
         }
         //only returns this if it fails to find the called-for place
         return (new PlaceDefinition());
     }
+
+
 }
