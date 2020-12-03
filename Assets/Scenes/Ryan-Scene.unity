@@ -213,7 +213,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1467864139
 GameObject:
@@ -226,6 +226,7 @@ GameObject:
   - component: {fileID: 1467864142}
   - component: {fileID: 1467864141}
   - component: {fileID: 1467864140}
+  - component: {fileID: 1467864143}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -296,5 +297,42 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1467864143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467864139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4dc32ee876583b4e93f322f1c3f7ed3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeDefinitions:
+  - place: 1
+    HPChange: 1
+    MoneyChange: -2
+    ReactionChange: 0
+    AccuracyChange: 0
+    ConfidenceChange: 0
+  - place: 2
+    HPChange: 0
+    MoneyChange: 0
+    ReactionChange: -1
+    AccuracyChange: 2
+    ConfidenceChange: 0
+  - place: 3
+    HPChange: 0
+    MoneyChange: 0
+    ReactionChange: 0
+    AccuracyChange: -1
+    ConfidenceChange: 2
+  - place: 4
+    HPChange: 0
+    MoneyChange: 1
+    ReactionChange: 1
+    AccuracyChange: 0
+    ConfidenceChange: -1
