@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122adf4144e38904da59f816acf8bc8a, type: 3}
   m_Name: Sally
   m_EditorClassIdentifier: 
-  health: 0
-  confidence: 0
-  accuracy: 0
-  reaction: 0
+  health: 4
+  temphealth: 4
+  confidence: 3
+  accuracy: 3
+  reaction: 3
   money: 0
+  human: 0
+  ai: 0
