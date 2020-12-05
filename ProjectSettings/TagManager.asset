@@ -8,6 +8,8 @@ TagManager:
   - Quick Shot
   - Hesitate
   - Aimed Shot
+  - Player_Hand
+  - AI_Hand
   layers:
   - Default
   - TransparentFX

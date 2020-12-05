@@ -9,7 +9,7 @@ public enum CardLocationState
     // no animations always just sitting there waiting to be clicked
 }
 
-public class Card_Location : Card
+public class Card_Location : MonoBehaviour
 {
     [Header("Set in Inspector")]
 
