@@ -1,18 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ships.events;
 
-public class HUMAN_Controller : MonoBehaviour
+public class HUMAN_Controller : GameState
 {
-    // Start is called before the first frame update
-    void Start()
+    public CardEvent cardEvent;
+    
+    public new State _state;
+    private void Start()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    public override void SetState(State state)
     {
-        
+        _state = state;
+        StartCoroutine(_state.Start());
     }
+    //public void 
 }
