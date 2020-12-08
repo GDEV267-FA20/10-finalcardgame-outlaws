@@ -6,7 +6,7 @@ public abstract class GameState : MonoBehaviour
 {
     protected State _state;
 
-    public void SetState(State state)
+    public virtual void SetState(State state)
     {
         _state = state;
         StartCoroutine(_state.Start());
