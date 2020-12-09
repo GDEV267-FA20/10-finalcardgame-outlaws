@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+
+
 public enum cardState
 {
     toDrawpile,
@@ -38,8 +40,34 @@ public class Card : MonoBehaviour
 
     public Vector2 endPosition;
     public Vector2 startPosition;
-    
+    private Vector3 duel_target_layout;
+    private Vector3 duel_GY_position;
 
+    public bool ReachedCenter
+    {
+        get {
+            if(gameObject.transform.position - duel_target_layout == Vector3.zero)
+            {
+                return true;
+            } else
+            {
+                return false;
+            }
+        }
+    }
+    public bool ReachedGY
+    {
+        get {
+            if(gameObject.transform.position - duel_GY_position == Vector3.zero)
+            {
+                return true;
+            } else
+            {
+                return false;
+            }
+        }
+    }
+    #region setters and getters
     public void setFace(bool newfaceUp)
     {
         this.faceUp = newfaceUp;
@@ -73,6 +101,7 @@ public class Card : MonoBehaviour
         }
         this.type = newType;
     }
+    #endregion
     public void Update()
     {
         switch (state)
@@ -141,17 +170,18 @@ public class Card : MonoBehaviour
     {
         try
         {
-            while (gameObject.transform.position - duel_target_layout != 0)
+            while (!ReachedCenter)
             {
                 //animate card to that position
                 endPosition = GameObject.Find("Player_Target").transform.position;
                 transform.position = Lerp(startPosition, endPosition, timeStartedLerping, lerpTime);
             }
+            yield break;
 
         }
         finally
         {
-            StartCorotuine(MoveOffScreen());
+            StartCoroutine(MoveOffScreen());
         }
     }
 
@@ -159,13 +189,13 @@ public class Card : MonoBehaviour
     {
         try
         {
-            while (gameObject.transform.position - duel_target_layout != 0)
+            while (!ReachedGY)
             {
                 //animate card to that position
                 endPosition = GameObject.Find("Player_DiscardPile").transform.position;
                 transform.position = Lerp(startPosition, endPosition, timeStartedLerping, lerpTime);
             }
-
+            yield break;
         }
         finally
         {

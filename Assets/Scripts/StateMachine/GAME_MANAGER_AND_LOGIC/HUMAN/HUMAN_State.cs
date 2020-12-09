@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HUMAN_State : State
 {
+    #region
     //game enters this state. 
     public new GameState GS; //not using base class field. 
     public HUMAN_State(GameState _GS) : base(_GS)
@@ -18,10 +19,12 @@ public class HUMAN_State : State
     }
     public IEnumerator End()
     {
-        yield break;
+        Se
     }
+    #endregion
+    
 }
-/*public class Waiting_For_Controller_State : HUMAN_State
+public class Waiting_For_Controller_State : HUMAN_State
 {
     public Card card;
     public Waiting_For_Controller_State(GameState _GS, Card _card):base(_GS)
@@ -31,6 +34,6 @@ public class HUMAN_State : State
     }
     public IEnumerator SendCard()
     {
-        HUMAN_Controller.
+        //HUMAN_Controller.
     }
-}*/
+}

@@ -26,6 +26,10 @@ public class Scriptable_object_parent : ScriptableObject
     {
         return;
     }
+    public virtual void Special_Effect(Scriptable_object_parent opponent)
+    {
+        return;
+    }
     public virtual void ClickedByHuman()
     {
         human = 1;
