@@ -137,22 +137,20 @@ public class Deck : MonoBehaviour
         return cdList;
     }
     
-<<<<<<< Updated upstream
-    public void MakeDeck() //ScriptableObject character
-=======
+
     public void MakeDeck(Scriptable_object_parent character)
->>>>>>> Stashed changes
+
     {
         // ******need to figure out who is the player playing / ai playing******
 
         // for each accuracy point add aimed shot
-        for(int i = 0; i < character.accuracy; i++){
+        for(int i = 0; i < character._Accuracy; i++){
             AddCard((MakeCard(0))); }
         // for each confidence point add quick shot
-        for (int i = 0; i < character.confidence; i++){
+        for (int i = 0; i < character._Confidence; i++){
             AddCard((MakeCard(1))); }
         // for each reaction time point add dodge
-        for (int i = 0; i < character.reaction; i++){
+        for (int i = 0; i < character._Reaction; i++){
             AddCard((MakeCard(2))); }
 
         // get list count, add hesitate cards untill count = 18
