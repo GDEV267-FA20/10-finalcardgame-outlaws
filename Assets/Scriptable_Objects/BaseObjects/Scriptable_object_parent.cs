@@ -22,9 +22,18 @@ public class Scriptable_object_parent : ScriptableObject
     public int _Reaction { get { return (reaction); } set { reaction=value; } }
     public int _Money{get{return(money);} set{money = value;} }
 
-    public virtual void Special_Effect()
+    public virtual void Special_Effect(Scriptable_object_parent opponent)
     {
         return;
     }
 
+    public virtual void ClickedByHuman()
+    {
+        human = 1;
+    }
+
+    public virtual void UndoChange()
+    {
+        //run this at the end of the game. reset all the stats to normal. 
+    }
 }
