@@ -29,8 +29,8 @@ public class Waiting_For_Controller_State : HUMAN_State
         base.GS = _GS;
         card = _card;
     }
-    public IEnumerator SendCard()
-    {
-        HUMAN_Controller.
-    }
+    //public IEnumerator SendCard()
+   // {
+   //     HUMAN_Controller.
+   // }
 }
