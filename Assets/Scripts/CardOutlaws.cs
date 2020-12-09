@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//**NOT USING THIS*****
 public enum CardType
 {
     quickShot, //0

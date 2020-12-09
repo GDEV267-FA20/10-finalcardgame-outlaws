@@ -33,6 +33,13 @@ public class Card : MonoBehaviour
     public cardState state;
     public Deck deck;
 
+    public float timeStartedLerping;
+    public float lerpTime;
+
+    public Vector2 endPosition;
+    public Vector2 startPosition;
+    
+
     public void setFace(bool newfaceUp)
     {
         this.faceUp = newfaceUp;
@@ -109,6 +116,60 @@ public class Card : MonoBehaviour
             case cardState.discard:
             case cardState.drawpile:
                 break;
+        }
+    }
+    public Vector3 Lerp(Vector3 start, Vector3 end, float timeStartedLerping, float lerpTime = 1)
+    {
+
+        float timeSinceStarted = Time.time - timeStartedLerping;
+
+        float percentageComplete = timeSinceStarted / lerpTime;
+
+        var result = Vector3.Lerp(start, end, percentageComplete);
+
+        // value hits 1 we finished moving so we need to stop lerping
+        if (percentageComplete >= 1)
+        {
+
+            Debug.Log("Finished Lerp...");
+            
+        }
+
+        return result;
+    }
+    public IEnumerator animateCardBecauseItWasPlayed()
+    {
+        try
+        {
+            while (gameObject.transform.position - duel_target_layout != 0)
+            {
+                //animate card to that position
+                endPosition = GameObject.Find("Player_Target").transform.position;
+                transform.position = Lerp(startPosition, endPosition, timeStartedLerping, lerpTime);
+            }
+
+        }
+        finally
+        {
+            StartCorotuine(MoveOffScreen());
+        }
+    }
+
+    private IEnumerator MoveOffScreen()
+    {
+        try
+        {
+            while (gameObject.transform.position - duel_target_layout != 0)
+            {
+                //animate card to that position
+                endPosition = GameObject.Find("Player_DiscardPile").transform.position;
+                transform.position = Lerp(startPosition, endPosition, timeStartedLerping, lerpTime);
+            }
+
+        }
+        finally
+        {
+            // play sound effect?
         }
     }
 }
