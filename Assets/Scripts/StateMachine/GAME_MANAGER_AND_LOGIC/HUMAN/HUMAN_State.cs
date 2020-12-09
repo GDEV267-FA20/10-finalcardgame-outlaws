@@ -17,9 +17,9 @@ public class HUMAN_State : State
         
         yield break;
     }
-    public IEnumerator End()
+    public virtual IEnumerator End()
     {
-        Se
+        yield break;
     }
     #endregion
     
@@ -36,4 +36,15 @@ public class Waiting_For_Controller_State : HUMAN_State
     {
         //HUMAN_Controller.
     }
+    public override IEnumerator Start()
+    {
+        return base.Start();
+    }
+    public override IEnumerator End()
+        {
+        return base.End();
+        }
+
+
 }
+public class 
