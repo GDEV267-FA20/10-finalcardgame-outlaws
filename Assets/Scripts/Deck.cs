@@ -49,10 +49,10 @@ public class Deck : MonoBehaviour
                 cgo = Instantiate(prefabQuickShot) as GameObject;
                 break;
             case 2:
-                cgo = Instantiate(prefabHesitate) as GameObject;
+                cgo = Instantiate(prefabDodge) as GameObject;
                 break;
             case 3:
-                cgo = Instantiate(prefabDodge) as GameObject;
+                cgo = Instantiate(prefabHesitate) as GameObject;
                 break;
 
         }
@@ -137,24 +137,28 @@ public class Deck : MonoBehaviour
         return cdList;
     }
     
+<<<<<<< Updated upstream
     public void MakeDeck() //ScriptableObject character
+=======
+    public void MakeDeck(Scriptable_object_parent character)
+>>>>>>> Stashed changes
     {
         // ******need to figure out who is the player playing / ai playing******
 
         // for each accuracy point add aimed shot
-        //for(int i = 0; i < character.accuracy; i++)
-            AddCard((MakeCard(0)));
+        for(int i = 0; i < character.accuracy; i++){
+            AddCard((MakeCard(0))); }
         // for each confidence point add quick shot
-        //for (int i = 0; i < character.confidence; i++)
-            AddCard((MakeCard(1)));
+        for (int i = 0; i < character.confidence; i++){
+            AddCard((MakeCard(1))); }
         // for each reaction time point add dodge
-        //for (int i = 0; i < character.reaction; i++)
-            AddCard((MakeCard(3)));
+        for (int i = 0; i < character.reaction; i++){
+            AddCard((MakeCard(2))); }
 
         // get list count, add hesitate cards untill count = 18
         for (int i = deck.Count; i<18; i++)
         {
-            AddCard((MakeCard(2)));
+            AddCard((MakeCard(3)));
         }
         
        
