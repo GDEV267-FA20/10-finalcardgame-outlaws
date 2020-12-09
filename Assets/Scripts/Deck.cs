@@ -17,16 +17,17 @@ public class Deck : MonoBehaviour
     public List<Card> discard;
     public bool ifShuffled = false;
     public Transform deckAnchor;
-
-    
-
-
-    [Header("Set In Inspector")]
     public GameObject prefabAimedShot;
     public GameObject prefabQuickShot;
     public GameObject prefabHesitate;
     public GameObject prefabDodge;
-    public Vector3 deckLoc;
+    //public Vector3 deckLoc;
+
+
+
+
+    [Header("Set In Inspector")]
+   
 
     public Copperplate copperplate;
     public Sabrina sabrina;
@@ -59,7 +60,7 @@ public class Deck : MonoBehaviour
         cgo.transform.parent = deckAnchor;
         Card card = cgo.GetComponent<Card>();
         // cgo.transform.localPosition = deckLoc;
-        cgo.transform.localPosition = new Vector3( deckLoc.x, deckLoc.y, (deck.Count * .1f));
+        // cgo.transform.localPosition = new Vector3( deckLoc.x, deckLoc.y, (deck.Count * .1f));
         card.setType(cNum);
         card.setFace(false);
 
@@ -68,7 +69,7 @@ public class Deck : MonoBehaviour
     }
     public void Start()
     {
-
+        
     }
     // Call this method after Scene(1) to populate deck
     public void AddCard(Card newCard)
@@ -136,7 +137,7 @@ public class Deck : MonoBehaviour
         return cdList;
     }
     
-    public void MakeDeck(ScriptableObject character)
+    public void MakeDeck() //ScriptableObject character
     {
         // ******need to figure out who is the player playing / ai playing******
 

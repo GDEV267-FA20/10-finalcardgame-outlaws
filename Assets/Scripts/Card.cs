@@ -137,7 +137,7 @@ public class Card : MonoBehaviour
 
         return result;
     }
-    public IEnumerator animateCardBecauseItWasPlayed()
+    /*public IEnumerator animateCardBecauseItWasPlayed()
     {
         try
         {
@@ -171,5 +171,5 @@ public class Card : MonoBehaviour
         {
             // play sound effect?
         }
-    }
+    }*/
 }
