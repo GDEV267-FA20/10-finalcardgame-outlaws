@@ -130,7 +130,7 @@ public class ThreeDays : MonoBehaviour {
                 //...change scene to duel
                 HumanPlayer.pushInfo();
                 AIPlayer.pushInfo();
-                //LoadNextScene or something
+                SceneManager.LoadScene("Wolfie_scene_0");
             }
         }
     }
