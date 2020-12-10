@@ -30,6 +30,16 @@ public class OutlawCharacter : MonoBehaviour {
         human = hum;
     }
 
+    public OutlawCharacter(Scriptable_object_parent cowboy, bool hum) {
+        health = cowboy.health;
+        money = cowboy.money;
+        reaction = cowboy.reaction;
+        confidence = cowboy.confidence;
+        accuracy = cowboy.accuracy;
+        human = hum;
+        character = cowboy;
+    }
+
     public OutlawCharacter(int hp, int mon, int rea, int con, int acc, bool hum) {
         health = hp;
         money = mon;
@@ -39,18 +49,45 @@ public class OutlawCharacter : MonoBehaviour {
         human = hum;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public int getHealth() {
+        return health;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
+    public int getMoney() {
+        return money;
     }
 
+    public int getConfidence() {
+        return confidence;
+    }
+
+    public int getAccuracy() {
+        return accuracy;
+    }
+
+    public int getReaction() {
+        return reaction;
+    }
+
+    public void changeHealth(int change) {
+        health += change;
+    }
+
+    public void changeMoney(int change) {
+        money += change;
+    }
+
+    public void changeReaction(int change) {
+        reaction += change;
+    }
+
+    public void changeConfidence(int change) {
+        confidence += change;
+    }
+
+    public void changeAccuracy(int change) {
+        accuracy += change;
+    }
 
     //pushes the information to the scriptable object, which persists between each scene
     public void pushInfo() {
