@@ -12,10 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33236d054f2e0e84e851e21950d53668, type: 3}
   m_Name: Copperplate
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   health: 3
   temphealth: 0
   confidence: 3
   accuracy: 3
+=======
+  health: 4
+  temphealth: 4
+  confidence: 3
+  accuracy: 2
+>>>>>>> 8533f205e6f92cfc48512ef2ba62d26f3bcecdf2
   reaction: 2
   money: 3
   human: 0

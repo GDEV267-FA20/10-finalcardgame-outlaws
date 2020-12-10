@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c4efeaa07db72b4e8f220d4b38b060c, type: 3}
   m_Name: William
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   health: 3
   temphealth: 0
+=======
+  health: 4
+  temphealth: 4
+>>>>>>> 8533f205e6f92cfc48512ef2ba62d26f3bcecdf2
   confidence: 3
   accuracy: 3
   reaction: 3
