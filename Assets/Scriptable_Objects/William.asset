@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c4efeaa07db72b4e8f220d4b38b060c, type: 3}
   m_Name: William
   m_EditorClassIdentifier: 
-  health: 4
-  temphealth: 4
-  confidence: 3
-  accuracy: 3
-  reaction: 3
+  health: 0
+  temphealth: 0
+  confidence: 0
+  accuracy: 0
+  reaction: 0
   money: 0
   human: 0
   ai: 0

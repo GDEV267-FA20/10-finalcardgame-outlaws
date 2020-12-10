@@ -48,4 +48,12 @@ public class PrintTestScript : MonoBehaviour
         aiCharacters[i].ai = 1;
         //SceneManager.LoadScene();
     }
+
+    public void Awake()
+    {
+        copperplate.UndoChange();
+        sabrina.UndoChange();
+        sally.UndoChange();
+        william.UndoChange();
+    }
 }
