@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GameLayout : MonoBehaviour
 {
+    #region positions in worldspace
     [Header("Set In Inspector")]
     public GameObject playerHand;
     public GameObject aiHand;
@@ -15,15 +17,55 @@ public class GameLayout : MonoBehaviour
     public GameObject aiDrawPile;
     public GameObject aiDiscardPile;
     public GameObject aiCharacterLocation;
+    #endregion 
+    #region dynamic laods and sets
+
+    public List<Scriptable_object_parent> outlaws;
+    public Sabrina sabrina;
+    public Copperplate copperplate;
+    public Sally sally;
+    public William william;
+    public Scriptable_object_parent human;
+    public Scriptable_object_parent bot;
 
     [Header("Set Dynamically")]
     public Deck playerDeck;
     public Deck aiDeck;
     public Scriptable_object_parent playerCharacter;
     public Scriptable_object_parent aiCharacter;
+    #endregion
+    public void Awake()
+    {
+        outlaws.Add(sabrina);
+        outlaws.Add(copperplate);
+        outlaws.Add(sally);
+        outlaws.Add(william);
 
+    }
     public void Start()
     {
+        //adjust stats 
+        IEnumerable<Scriptable_object_parent> _human =
+            from outlaw in outlaws
+            where outlaw.human == 1
+            select outlaw;
+
+        IEnumerable<Scriptable_object_parent> _bot =
+            from inlaw in outlaws
+            where inlaw.ai == 1
+            select inlaw;
+        
+        foreach(Scriptable_object_parent s in _human)
+        {
+            human = (Scriptable_object_parent)_human;
+        }
+        foreach(Scriptable_object_parent s in _bot)
+        {
+            human = (Scriptable_object_parent)_bot;
+        }
+        bot.Special_Effect(human);
+        human.Special_Effect(bot);
+
         // put each script into variables
         playerDeck = playerDrawPile.GetComponent<Deck>();
         aiDeck = aiDrawPile.GetComponent<Deck>();
