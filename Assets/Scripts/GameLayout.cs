@@ -24,12 +24,13 @@ public class GameLayout : MonoBehaviour
 
     public void Start()
     {
-        playerDrawPile.AddComponent<Deck>();
+        // put each script into variables
         playerDeck = playerDrawPile.GetComponent<Deck>();
-        //aiDeck = GetComponent<Deck>();
+        aiDeck = GetComponent<Deck>();
         
+        // Make both decks passing in scriptable object taken from Town Scene
         playerDeck.MakeDeck(playerCharacter);
-        //aiDeck.MakeDeck(aiCharacter);
+        aiDeck.MakeDeck(aiCharacter);
         LayoutGame();
     }
     public void LayoutGame()
@@ -43,7 +44,15 @@ public class GameLayout : MonoBehaviour
         {
             aiDeck.deck[i].transform.position = aiDrawPile.transform.position;
         }
+        // Place player and ai character sprites at their respective character positions
+        // ***** Need to recieve information from Character Select screen****
 
+        //playerCharacterLocation.transfrom.position;
+        //aiCharacterLocation.transform.position;
+
+        // Draw 6 cards into each hand
+        playerDeck.Draw6();
+        aiDeck.Draw6();
 
     }
     public void Update()

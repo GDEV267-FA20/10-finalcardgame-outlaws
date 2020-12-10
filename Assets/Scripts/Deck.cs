@@ -22,6 +22,7 @@ public class Deck : MonoBehaviour
     public GameObject prefabHesitate;
     public GameObject prefabDodge;
     //public Vector3 deckLoc;
+    
 
 
 
