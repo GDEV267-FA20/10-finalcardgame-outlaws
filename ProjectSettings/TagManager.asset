@@ -10,6 +10,7 @@ TagManager:
   - Aimed Shot
   - Player_Hand
   - AI_Hand
+  - Canvas
   layers:
   - Default
   - TransparentFX
