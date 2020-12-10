@@ -47,18 +47,24 @@ public class ThreeDays : MonoBehaviour {
         //also, it changes their parent to be the canvas
         DoctorPlace = (Instantiate(placeCards[0]) as PlaceCards);
         DoctorPlace.transform.parent = canvas.transform;
+        DoctorPlace.transform.position = new Vector3(-348f, 170f, 0f) + new Vector3(500.5f, 281.5f, 0f);
+        //DoctorPlace.RectTransform.PosX = 348f;
 
         PoolHallPlace = (Instantiate(placeCards[1]) as PlaceCards);
         PoolHallPlace.transform.parent = canvas.transform;
+        PoolHallPlace.transform.position = new Vector3(348f, 170f, 0f) + new Vector3(500.5f, 281.5f, 0f);
 
         SaloonPlace = (Instantiate(placeCards[2]) as PlaceCards);
         SaloonPlace.transform.parent = canvas.transform;
+        SaloonPlace.transform.position = new Vector3(-348f, -170f, 0f) + new Vector3(500.5f, 281.5f, 0f);
 
         ShootingRangePlace = (Instantiate(placeCards[3]) as PlaceCards);
         ShootingRangePlace.transform.parent = canvas.transform;
+        ShootingRangePlace.transform.position = new Vector3(348f, -170f, 0f) + new Vector3(500.5f, 281.5f, 0f);
 
         ConfirmButton = (Instantiate(ConfirmButtonPrefab) as PlaceCards);
         ConfirmButton.transform.parent = canvas.transform;
+        ConfirmButton.transform.position = new Vector3(0f, 0f, 0f) + new Vector3(500.5f, 281.5f, 0f);
 
         //set player's chosen place to None
         chosen = ConfirmButton.getPlace();
