@@ -13,12 +13,12 @@ public class Sabrina : Scriptable_object_parent
         accuracy = 3;
         reaction = 3;
         money = 0;
+        human = 0;
+        ai = 0;
     }
 
     public override void Special_Effect(Scriptable_object_parent opponent)
     {
         opponent._Reaction -= 1;
     }
-
-
 }

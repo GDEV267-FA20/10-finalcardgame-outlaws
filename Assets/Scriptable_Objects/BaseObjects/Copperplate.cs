@@ -13,6 +13,7 @@ public class Copperplate : Scriptable_object_parent
         accuracy = 3;
         reaction = 2;
         money = 3;
+        human = 0;
+        ai = 0;
     }
-
 }

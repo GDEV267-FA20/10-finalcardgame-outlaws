@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33236d054f2e0e84e851e21950d53668, type: 3}
-  m_Name: Copperplate
+  m_Script: {fileID: 11500000, guid: 92009a0f70f00f64fb5f6e8c0247449c, type: 3}
+  m_Name: Sabrina
   m_EditorClassIdentifier: 
-  health: 0
+  health: 3
   temphealth: 0
-  confidence: 0
-  accuracy: 0
-  reaction: 0
+  confidence: 3
+  accuracy: 3
+  reaction: 3
   money: 0
   human: 0
   ai: 0
