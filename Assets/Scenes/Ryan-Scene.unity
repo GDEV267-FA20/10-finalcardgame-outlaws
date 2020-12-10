@@ -266,7 +266,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1024, y: 576}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -411,7 +411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlaws:
   - {fileID: 11400000, guid: 741f848e74d174049bdbebb26988e761, type: 2}
-  - {fileID: 11400000, guid: f49197b7b711eef46bb1aceeacacca2f, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 94c0e3e4ba543f049a4db285b1fd92f1, type: 2}
   - {fileID: 11400000, guid: 1daf0a3c0b41b1943898996dac020774, type: 2}
   placeCards:
