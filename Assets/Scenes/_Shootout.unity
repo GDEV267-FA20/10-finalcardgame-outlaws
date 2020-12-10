@@ -427,6 +427,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 838750775}
+  - component: {fileID: 838750776}
   m_Layer: 0
   m_Name: Player_DrawPile
   m_TagString: Untagged
@@ -448,6 +449,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &838750776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838750774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8943bfec22b83f642a2c26deebe414e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardNames: []
+  cards: []
+  deck: []
+  hand: []
+  discard: []
+  ifShuffled: 0
+  deckAnchor: {fileID: 755441578004331745, guid: bdca7492d9fe5d94187647313988bf90, type: 3}
+  prefabAimedShot: {fileID: 88291208163273279, guid: 5fd998d4b071a154d845bfa0ea0081b6, type: 3}
+  prefabQuickShot: {fileID: 552539900299370134, guid: 7b4236385363ca04c820b41f04725308, type: 3}
+  prefabHesitate: {fileID: 3288340652955262733, guid: c8295c8b7344f7a4c89dc69f80c086c1, type: 3}
+  prefabDodge: {fileID: 7160420158606914040, guid: 347462c3bc048aa4e9209bf46185e4af, type: 3}
+  copperplate: {fileID: 11400000, guid: 741f848e74d174049bdbebb26988e761, type: 2}
+  sabrina: {fileID: 11400000, guid: f49197b7b711eef46bb1aceeacacca2f, type: 2}
+  sally: {fileID: 11400000, guid: 94c0e3e4ba543f049a4db285b1fd92f1, type: 2}
+  william: {fileID: 11400000, guid: 1daf0a3c0b41b1943898996dac020774, type: 2}
 --- !u!1 &1078815939
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,6 +577,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1159058696}
+  - component: {fileID: 1159058697}
   m_Layer: 0
   m_Name: AI_DrawPile
   m_TagString: Untagged
@@ -570,6 +599,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1159058697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159058695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8943bfec22b83f642a2c26deebe414e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardNames: []
+  cards: []
+  deck: []
+  hand: []
+  discard: []
+  ifShuffled: 0
+  deckAnchor: {fileID: 755441578004331745, guid: bdca7492d9fe5d94187647313988bf90, type: 3}
+  prefabAimedShot: {fileID: 88291208163273279, guid: 5fd998d4b071a154d845bfa0ea0081b6, type: 3}
+  prefabQuickShot: {fileID: 552539900299370134, guid: 7b4236385363ca04c820b41f04725308, type: 3}
+  prefabHesitate: {fileID: 3288340652955262733, guid: c8295c8b7344f7a4c89dc69f80c086c1, type: 3}
+  prefabDodge: {fileID: 7160420158606914040, guid: 347462c3bc048aa4e9209bf46185e4af, type: 3}
+  copperplate: {fileID: 11400000, guid: 741f848e74d174049bdbebb26988e761, type: 2}
+  sabrina: {fileID: 11400000, guid: f49197b7b711eef46bb1aceeacacca2f, type: 2}
+  sally: {fileID: 11400000, guid: 94c0e3e4ba543f049a4db285b1fd92f1, type: 2}
+  william: {fileID: 11400000, guid: 1daf0a3c0b41b1943898996dac020774, type: 2}
 --- !u!1 &1557258145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,7 +1085,6 @@ GameObject:
   - component: {fileID: 2037736189}
   - component: {fileID: 2037736188}
   - component: {fileID: 2037736187}
-  - component: {fileID: 2037736190}
   - component: {fileID: 2037736191}
   m_Layer: 0
   m_Name: Main Camera
@@ -1103,33 +1158,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2037736190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2037736186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8943bfec22b83f642a2c26deebe414e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardNames: []
-  cards: []
-  deck: []
-  hand: []
-  discard: []
-  ifShuffled: 0
-  deckAnchor: {fileID: 1557258146}
-  prefabAimedShot: {fileID: 0}
-  prefabQuickShot: {fileID: 0}
-  prefabHesitate: {fileID: 0}
-  prefabDodge: {fileID: 0}
-  copperplate: {fileID: 11400000, guid: 741f848e74d174049bdbebb26988e761, type: 2}
-  sabrina: {fileID: 11400000, guid: f49197b7b711eef46bb1aceeacacca2f, type: 2}
-  sally: {fileID: 11400000, guid: 94c0e3e4ba543f049a4db285b1fd92f1, type: 2}
-  william: {fileID: 11400000, guid: 1daf0a3c0b41b1943898996dac020774, type: 2}
 --- !u!114 &2037736191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1144,16 +1172,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHand: {fileID: 546702900}
   aiHand: {fileID: 1989415406}
-  playerCharacter: {fileID: 693110876}
+  playerCharacterLocation: {fileID: 693110876}
   playerTarget: {fileID: 1745533737}
   playerDrawPile: {fileID: 838750774}
   playerDiscardPile: {fileID: 387640938}
   aiTarget: {fileID: 1664135125}
   aiDrawPile: {fileID: 1159058695}
   aiDiscardPile: {fileID: 80981948}
-  aiCharacter: {fileID: 808999616}
+  aiCharacterLocation: {fileID: 808999616}
   playerDeck: {fileID: 0}
   aiDeck: {fileID: 0}
+  playerCharacter: {fileID: 0}
+  aiCharacter: {fileID: 0}
 --- !u!1001 &472504344499955312
 PrefabInstance:
   m_ObjectHideFlags: 0

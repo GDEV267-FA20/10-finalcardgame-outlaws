@@ -26,7 +26,7 @@ public class GameLayout : MonoBehaviour
     {
         // put each script into variables
         playerDeck = playerDrawPile.GetComponent<Deck>();
-        aiDeck = GetComponent<Deck>();
+        aiDeck = aiDrawPile.GetComponent<Deck>();
         
         // Make both decks passing in scriptable object taken from Town Scene
         playerDeck.MakeDeck(playerCharacter);
