@@ -32,10 +32,10 @@ public class Waiting_For_Controller_State : HUMAN_State
         base.GS = _GS;
         card = _card;
     }
-    public IEnumerator SendCard()
+   /* public IEnumerator SendCard()
     {
         //HUMAN_Controller.
-    }
+    }*/
     public override IEnumerator Start()
     {
         return base.Start();
@@ -47,4 +47,4 @@ public class Waiting_For_Controller_State : HUMAN_State
 
 
 }
-public class 
+//public class 

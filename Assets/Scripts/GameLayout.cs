@@ -7,18 +7,20 @@ public class GameLayout : MonoBehaviour
     [Header("Set In Inspector")]
     public GameObject playerHand;
     public GameObject aiHand;
-    public GameObject playerCharacter;
+    public GameObject playerCharacterLocation;
     public GameObject playerTarget;
     public GameObject playerDrawPile;
     public GameObject playerDiscardPile;
     public GameObject aiTarget;
     public GameObject aiDrawPile;
     public GameObject aiDiscardPile;
-    public GameObject aiCharacter;
+    public GameObject aiCharacterLocation;
 
     [Header("Set Dynamically")]
     public Deck playerDeck;
     public Deck aiDeck;
+    public Scriptable_object_parent playerCharacter;
+    public Scriptable_object_parent aiCharacter;
 
     public void Start()
     {
@@ -26,8 +28,8 @@ public class GameLayout : MonoBehaviour
         playerDeck = playerDrawPile.GetComponent<Deck>();
         //aiDeck = GetComponent<Deck>();
         
-        playerDeck.MakeDeck();
-        //aiDeck.MakeDeck();
+        playerDeck.MakeDeck(playerCharacter);
+        //aiDeck.MakeDeck(aiCharacter);
         LayoutGame();
     }
     public void LayoutGame()

@@ -9,7 +9,7 @@ public class PrintTestScript : MonoBehaviour
     public Sally sally;
     public Sabrina sabrina;
     public William william;
-
+    #region printlines
     public void printStatement()
     {
         print(copperplate.name);
@@ -29,4 +29,7 @@ public class PrintTestScript : MonoBehaviour
     {
         print(william.name);
     }
+    #endregion
+
+
 }
