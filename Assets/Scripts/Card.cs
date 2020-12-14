@@ -40,8 +40,8 @@ public class Card : MonoBehaviour
 
     public Vector2 endPosition;
     public Vector2 startPosition;
-    private Vector3 duel_target_layout;
-    private Vector3 duel_GY_position;
+    public Vector3 duel_target_layout;
+    public Vector3 duel_GY_position;
 
     public bool ReachedCenter
     {
@@ -92,10 +92,10 @@ public class Card : MonoBehaviour
                 newType = "quickShot";
                 break;
             case 2:
-                newType = "hesitate";
+                newType = "dodge";
                 break;
             case 3:
-                newType = "dodge";
+                newType = "hesitate";
                 break;
 
         }

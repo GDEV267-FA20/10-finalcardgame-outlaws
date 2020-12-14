@@ -1180,6 +1180,11 @@ MonoBehaviour:
   aiDrawPile: {fileID: 1159058695}
   aiDiscardPile: {fileID: 80981948}
   aiCharacterLocation: {fileID: 808999616}
+  outlaws: []
+  sabrina: {fileID: 11400000, guid: f49197b7b711eef46bb1aceeacacca2f, type: 2}
+  copperplate: {fileID: 11400000, guid: 741f848e74d174049bdbebb26988e761, type: 2}
+  sally: {fileID: 11400000, guid: 94c0e3e4ba543f049a4db285b1fd92f1, type: 2}
+  william: {fileID: 11400000, guid: 1daf0a3c0b41b1943898996dac020774, type: 2}
   playerDeck: {fileID: 0}
   aiDeck: {fileID: 0}
   playerCharacter: {fileID: 0}

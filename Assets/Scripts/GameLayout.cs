@@ -25,8 +25,8 @@ public class GameLayout : MonoBehaviour
     public Copperplate copperplate;
     public Sally sally;
     public William william;
-    public Scriptable_object_parent human;
-    public Scriptable_object_parent bot;
+    private Scriptable_object_parent human;
+    private Scriptable_object_parent bot;
 
     [Header("Set Dynamically")]
     public Deck playerDeck;
@@ -57,15 +57,16 @@ public class GameLayout : MonoBehaviour
         
         foreach(Scriptable_object_parent s in _human)
         {
-            human = (Scriptable_object_parent)_human;
+            human = (Scriptable_object_parent)s;
         }
         foreach(Scriptable_object_parent s in _bot)
         {
-            human = (Scriptable_object_parent)_bot;
+            bot = (Scriptable_object_parent)s;
         }
         bot.Special_Effect(human);
         human.Special_Effect(bot);
-
+        aiCharacter = bot;
+        playerCharacter = human;
         // put each script into variables
         playerDeck = playerDrawPile.GetComponent<Deck>();
         aiDeck = aiDrawPile.GetComponent<Deck>();
@@ -86,8 +87,7 @@ public class GameLayout : MonoBehaviour
         {
             aiDeck.deck[i].transform.position = aiDrawPile.transform.position;
         }
-        // Place player and ai character sprites at their respective character positions
-        // ***** Need to recieve information from Character Select screen****
+       
 
         //playerCharacterLocation.transfrom.position;
         //aiCharacterLocation.transform.position;
@@ -99,15 +99,16 @@ public class GameLayout : MonoBehaviour
     }
     public void Update()
     {
-        /*for(int i= 0; i < playerDeck.hand.Count; i++)
+        
+        for(int i= 0; i < playerDeck.hand.Count; i++)
         {
             playerDeck.hand[i].transform.position = playerHand.transform.position
                 - new Vector3(i, 0.0f, 0.0f);
-        }*/
-        /*for(int i= 0; i < aiDeck.hand.Count; i++)
+        }
+        for(int i= 0; i < aiDeck.hand.Count; i++)
         {
             aiDeck.hand[i].transform.position = aiHand.transform.position
                 - new Vector3(i, 0.0f, 0.0f);
-        }*/
+        }
     }
 }
