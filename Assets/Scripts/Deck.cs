@@ -58,10 +58,10 @@ public class Deck : MonoBehaviour
 
         }
         
-        cgo.transform.parent = deckAnchor;
+        //cgo.transform.SetParent(deckAnchor);
         Card card = cgo.GetComponent<Card>();
-        // cgo.transform.localPosition = deckLoc;
-        // cgo.transform.localPosition = new Vector3( deckLoc.x, deckLoc.y, (deck.Count * .1f));
+         //cgo.transform.localPosition = deckLoc;
+        //cgo.transform.localPosition = new Vector3( deckLoc.x, deckLoc.y, (deck.Count * .1f));
         card.setType(cNum);
         card.setFace(false);
 
@@ -84,7 +84,7 @@ public class Deck : MonoBehaviour
     {
         deck.Remove(newCard);
     }
-    public void Shuffle(ref List<Card> oDeck)
+    public void Shuffle( List<Card> oDeck)
     {
         // boolean to check if its shuffled / full deck
         // can use this to trigger next event?
