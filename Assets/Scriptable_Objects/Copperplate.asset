@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Copperplate
   m_EditorClassIdentifier: 
   health: 3
-  temphealth: 0
-  confidence: 3
+  temphealth: 3
+  confidence: 2
   accuracy: 3
   reaction: 2
   money: 3
