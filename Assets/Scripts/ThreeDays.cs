@@ -132,7 +132,7 @@ public class ThreeDays : MonoBehaviour {
             if(day == 4) {
                 HumanPlayer.pushInfo();
                 AIPlayer.pushInfo();
-                //SceneManager.LoadScene("_Shootout");
+                SceneManager.LoadScene("_Shootout");
             }
 
             //if it's not after day 3, then update the UI and get ready for the next day
