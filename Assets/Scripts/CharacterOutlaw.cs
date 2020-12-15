@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OutlawCharacter : MonoBehaviour {
-
+public class CharacterOutlaw : MonoBehaviour{
+    
     private int health;
     private int money;
     private int reaction;
@@ -12,9 +12,9 @@ public class OutlawCharacter : MonoBehaviour {
     private bool human;
     private Scriptable_object_parent character;
 
-    private void Awake() {
-        setStats();
-    }
+    //private void Awake() {
+    //    setStats();
+    //}
 
     public void setStats() {
         health = 4;
@@ -101,5 +101,4 @@ public class OutlawCharacter : MonoBehaviour {
         character._Reaction = reaction;
         character._Money = money;
     }
-
 }
