@@ -46,6 +46,7 @@ public class PrintTestScript : MonoBehaviour
 
         int i = Random.Range(0, 3);
         aiCharacters[i].ai = 1;
-        //SceneManager.LoadScene();
+
+        SceneManager.LoadScene("Ryan-Scene");
     }
 }
