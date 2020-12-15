@@ -33,9 +33,14 @@ public class GameLayout : MonoBehaviour
     public Deck aiDeck;
     public Scriptable_object_parent playerCharacter;
     public Scriptable_object_parent aiCharacter;
+    public static GameLayout S;
     #endregion
     public void Awake()
     {
+        if(S==null)
+        {
+            S=this;
+        }
         outlaws.Add(sabrina);
         outlaws.Add(copperplate);
         outlaws.Add(sally);
