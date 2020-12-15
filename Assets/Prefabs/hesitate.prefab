@@ -95,8 +95,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449f0ae19878e1b448e605215f42135b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardType: 0
-  state: 9
-  handPostion: {x: 0, y: 0, z: 0}
-  targetPostion: {x: 0, y: 0, z: 0}
-  discardPostion: {x: 0, y: 0, z: 0}
+  type: 
+  faceUp: 0
+  state: 0
+  deck: {fileID: 0}
+  timeStartedLerping: 0
+  lerpTime: 0
+  endPosition: {x: 0, y: 0}
+  startPosition: {x: 0, y: 0}
+  duel_target_layout: {x: 0, y: 0, z: 0}
+  duel_GY_position: {x: 0, y: 0, z: 0}

@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: af5383b8fcb0207439ab4055728a5325
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ai: {instanceID: 0}
+  - player: {instanceID: 0}
+  - aiDamage: {fileID: 11400000, guid: a1e668e1863133b4399c932b3419fcd5, type: 2}
+  - playerDamage: {fileID: 11400000, guid: 536de5c710038964bb78eb38199350cd, type: 2}
+  - playermiss: {fileID: 11400000, guid: fda831066210dbc4982f6607cca6a003, type: 2}
+  - aimiss: {fileID: 11400000, guid: 50cea6226e167d544950fbda5f3fe743, type: 2}
+  - Player_reload: {fileID: 11400000, guid: f1299c2df0c241548b17b4bcb88e0b3c, type: 2}
+  - Opponent_reload: {fileID: 11400000, guid: 9e993365bdf332947b0ca45e9bb88a68, type: 2}
+  - s0: {instanceID: 0}
+  - s1: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

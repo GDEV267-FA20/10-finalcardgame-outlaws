@@ -16,4 +16,8 @@ public class Copperplate : Scriptable_object_parent
         human = 0;
         ai = 0;
     }
+    public override void Special_Effect(Scriptable_object_parent opponent)
+    {
+        return;
+    }
 }

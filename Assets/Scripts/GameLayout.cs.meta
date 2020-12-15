@@ -3,7 +3,27 @@ guid: da7bde03f44960f49aa269b5d0b5832f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - playerHand: {instanceID: 0}
+  - aiHand: {instanceID: 0}
+  - playerCharacterLocation: {instanceID: 0}
+  - playerTarget: {instanceID: 0}
+  - playerDrawPile: {instanceID: 0}
+  - playerDiscardPile: {instanceID: 0}
+  - aiTarget: {instanceID: 0}
+  - aiDrawPile: {instanceID: 0}
+  - aiDiscardPile: {instanceID: 0}
+  - aiCharacterLocation: {instanceID: 0}
+  - sabrina: {fileID: 11400000, guid: f49197b7b711eef46bb1aceeacacca2f, type: 2}
+  - copperplate: {fileID: 11400000, guid: 741f848e74d174049bdbebb26988e761, type: 2}
+  - sally: {fileID: 11400000, guid: 94c0e3e4ba543f049a4db285b1fd92f1, type: 2}
+  - william: {fileID: 11400000, guid: 1daf0a3c0b41b1943898996dac020774, type: 2}
+  - human: {instanceID: 0}
+  - bot: {instanceID: 0}
+  - playerDeck: {instanceID: 0}
+  - aiDeck: {instanceID: 0}
+  - playerCharacter: {instanceID: 0}
+  - aiCharacter: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
