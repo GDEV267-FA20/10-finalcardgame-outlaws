@@ -42,6 +42,19 @@ public class Card : MonoBehaviour
     public Vector2 startPosition;
     public Vector3 duel_target_layout;
     public Vector3 duel_GY_position;
+    
+
+    public static GameObject Player_Hand;
+    public static GameObject Player_Target;
+    public  static GameObject Player_DiscardPile;
+
+    private void Awake()
+    {
+        Player_Hand = GameObject.Find("Player_Hand");
+        Player_Target = GameObject.Find("Player_Target");
+        Player_DiscardPile = GameObject.Find("Player_DiscardPile");
+
+    }
 
     public bool ReachedCenter
     {
@@ -108,18 +121,18 @@ public class Card : MonoBehaviour
         {
             // animate to hand
             case cardState.toHand:
-                transform.position = GameObject.Find("Player_Hand").transform.position;
+                transform.position = Lerp( transform.position, Player_Hand.transform.position, Time.time);
                 state = cardState.hand;
                 break;
             // animate to target
             case cardState.toTarget:
-                transform.position = GameObject.Find("Player_Target").transform.position;
+                transform.position =Lerp(transform.position, Player_Target.transform.position, Time.time);
                 state = cardState.target;
                 break;
             // animate to discard pile
             case cardState.toDiscard:
-                transform.position = GameObject.Find("Player_DiscardPile").transform.position;
-                state = cardState.discard;
+                transform.position = Lerp(transform.position, Player_DiscardPile.transform.position, Time.time);
+            state = cardState.discard;
                 break;
             case cardState.to:
                 break;
@@ -139,7 +152,8 @@ public class Card : MonoBehaviour
         {
             // only clicking cards in your hand will play them
             case cardState.hand:
-                transform.position = GameObject.Find("Player_Target").transform.position;
+                //transform.position = GameObject.Find("Player_Target").transform.position;
+                Debug.Log("was clicked");
                 break;
             case cardState.target:
             case cardState.discard:

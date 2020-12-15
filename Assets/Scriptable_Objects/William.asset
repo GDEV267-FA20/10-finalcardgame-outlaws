@@ -19,4 +19,4 @@ MonoBehaviour:
   reaction: 3
   money: 0
   human: 0
-  ai: 0
+  ai: 1

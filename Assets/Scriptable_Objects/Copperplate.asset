@@ -18,5 +18,5 @@ MonoBehaviour:
   accuracy: 3
   reaction: 2
   money: 3
-  human: 0
+  human: 1
   ai: 0
