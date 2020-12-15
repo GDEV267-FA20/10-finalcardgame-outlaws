@@ -34,6 +34,10 @@ public class Card : MonoBehaviour
     public bool faceUp;
     public cardState state;
     public Deck deck;
+    
+
+    public bool moving;
+    public bool ai;
 
     public float timeStartedLerping;
     public float lerpTime;
@@ -127,7 +131,8 @@ public class Card : MonoBehaviour
             // animate to target
             case cardState.toTarget:
                 transform.position =Lerp(transform.position, Player_Target.transform.position, Time.time);
-                state = cardState.target;
+                if(!moving){ state = cardState.target; }
+                
                 break;
             // animate to discard pile
             case cardState.toDiscard:
@@ -154,6 +159,8 @@ public class Card : MonoBehaviour
             case cardState.hand:
                 //transform.position = GameObject.Find("Player_Target").transform.position;
                 Debug.Log("was clicked");
+                moving = true;
+                state= cardState.toTarget;
                 break;
             case cardState.target:
             case cardState.discard:
@@ -168,14 +175,14 @@ public class Card : MonoBehaviour
 
         float percentageComplete = timeSinceStarted / lerpTime;
 
-        var result = Vector3.Lerp(start, end, percentageComplete);
+        var result = Vector3.Lerp(start, end, percentageComplete*Time.deltaTime);
 
         // value hits 1 we finished moving so we need to stop lerping
         if (percentageComplete >= 1)
         {
 
             Debug.Log("Finished Lerp...");
-            
+            moving = false;
         }
 
         return result;

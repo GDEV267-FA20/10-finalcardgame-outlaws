@@ -14,7 +14,7 @@ MonoImporter:
   - Opponent_reload: {fileID: 11400000, guid: 9e993365bdf332947b0ca45e9bb88a68, type: 2}
   - s0: {instanceID: 0}
   - s1: {instanceID: 0}
-  executionOrder: 0
+  executionOrder: 100
   icon: {instanceID: 0}
   userData: 
   assetBundleName: 
