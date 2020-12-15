@@ -476,6 +476,59 @@ MonoBehaviour:
   sabrina: {fileID: 11400000, guid: f49197b7b711eef46bb1aceeacacca2f, type: 2}
   sally: {fileID: 11400000, guid: 94c0e3e4ba543f049a4db285b1fd92f1, type: 2}
   william: {fileID: 11400000, guid: 1daf0a3c0b41b1943898996dac020774, type: 2}
+--- !u!1 &983830734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 983830736}
+  - component: {fileID: 983830735}
+  m_Layer: 0
+  m_Name: DuelHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &983830735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983830734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5383b8fcb0207439ab4055728a5325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ai: {fileID: 0}
+  player: {fileID: 0}
+  aiDamage: {fileID: 0}
+  playerDamage: {fileID: 0}
+  playermiss: {fileID: 0}
+  aimiss: {fileID: 0}
+  Player_reload: {fileID: 0}
+  Opponent_reload: {fileID: 0}
+  s0: {fileID: 0}
+  s1: {fileID: 0}
+--- !u!4 &983830736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983830734}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1078815939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,6 +1139,7 @@ GameObject:
   - component: {fileID: 2037736188}
   - component: {fileID: 2037736187}
   - component: {fileID: 2037736191}
+  - component: {fileID: 2037736190}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1158,6 +1212,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2037736190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037736186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50e31b78f16ac4943bf0e6b46ec369d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 0}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2037736191
 MonoBehaviour:
   m_ObjectHideFlags: 0

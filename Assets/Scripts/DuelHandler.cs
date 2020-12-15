@@ -11,8 +11,10 @@ public class DuelHandler : MonoBehaviour
     public VoidEvent playerDamage;
     public VoidEvent playermiss;
     public VoidEvent aimiss;
-    public Scriptable_object_parent s0;
-    public Scriptable_object_parent s1;
+    public VoidEvent Player_reload;
+    public VoidEvent Opponent_reload;
+    public Scriptable_object_parent s0;//ai
+    public Scriptable_object_parent s1;//human
     
 
     private void Awake()
@@ -21,7 +23,7 @@ public class DuelHandler : MonoBehaviour
         s1= GameLayout.S.playerCharacter;
        
     }
-    public void CompareDuel (Card ai, Card player)
+    public void CompareDuel (Card player, Card ai)
     {
         var aiType = ai.type;
         var playerType = player.type;
@@ -43,36 +45,78 @@ public class DuelHandler : MonoBehaviour
         }*/
         switch(test)
         {
+            //player first then ai
             case("dodgedodge"):
                
             case("hesitatehesitate"):
                 
             case("hesitatedodge"):
             case("dodgehesitate"):
+                shinshotMiss();
+                break;
                 //reloads
             case("reloaddhesitate"):
+                reloadPlayer();
+                shinMiss();
+                break;
             case("hesitatereload"):
-            case("dodgereload"):
-            case("reloaddodge"):
-            
-            case("reloadreload"):
-
-            case("reloadaimedShot"):
+            reloadAI();
+            shotMiss();
+            break;
+            case ("dodgereload"):
+            reloadAI();
+            shotMiss();
+            break;
+            case ("reloaddodge"):
+                shinMiss();
+            reloadPlayer();
+        
+            break;
+            case ("reloadreload"):
+            reloadAI();
+            reloadPlayer();
+            break;
+            case ("reloadaimedShot"):
+           
             case ("reloadquickShot"):
-            case("quickShotreload"):
+            reloadPlayer();
+            takeDamagePlayer(s1);
+            break;
+
+            case ("quickShotreload"):
             case("aimedShotreload"):
+            reloadAI();
+            takeDamagePlayer(s0);
+            break;
+            case ("quickShotaimedShot"):
+            shinMiss();
+            takeDamagePlayer(s0);
+            break;
+            case ("aimedShotquickShot"):
+            shotMiss();
+            takeDamagePlayer(s1);
+            break;
             
-            case("quickShotaimedShot"):
-            case("aimedShotquickShot"):
             case("quickShotdodge"):
+            shotMiss();
+            break;
             case("aimedShotdodge"):
+            takeDamagePlayer(s0);
+            break;
             case("dodgequickShot"):
+            shinMiss();
+            break;
             case("dodgeaimedShot"):
+                takeDamagePlayer(s1);
+            break;
             case("aimedShotaimedShot"):
             case("quickShotquickShot"):
-
+                takeDamagePlayer();
+            break;
         }
+        Invoke("waitForPlayer", 4);
     }
+    #region event calls
     public void takeDamagePlayer(Scriptable_object_parent s_)
     {
         s_.temphealth -= 1;
@@ -102,5 +146,23 @@ public class DuelHandler : MonoBehaviour
     {
         aimiss.FireEvent();
     }
-
+    public void shinshotMiss()
+    {
+        aimiss.FireEvent();
+        playermiss.FireEvent();
+    }
+    public void reloadPlayer()
+    {
+        Player_reload.FireEvent();
+    }
+    public void reloadAI()
+    {
+        Opponent_reload.FireEvent();
+    }
+    #endregion
+    public void waitForPlayer()
+    {
+        player.state = cardState.toDiscard;
+        ai.state = cardState.toDiscard;
+    }
 }
